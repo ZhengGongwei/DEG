@@ -3,6 +3,7 @@
 # GSE217659_RAW
 
 # https://mp.weixin.qq.com/s/lJatjIvzqySEBgsuhh9s_w
+# http://www.bio-info-trainee.com/bioconductor_China/software/DESeq2.html
 
 setwd("C:/Users/Lenovo/OneDrive/liver/GSE217659_RAW")
 #Dclk1
@@ -148,6 +149,7 @@ write.table(ids,file = "ids.txt",siep = "\t",row.names=F,col.names = T)
 
 library(limma)
 library(edgeR)
+# http://www.bio-info-trainee.com/bioconductor_China/software/limma.html
 setwd("C:/Users/Lenovo/OneDrive/liver/GSE205203_RAW")
 library(GEOquery)
 gset <- getGEO(filename='GSE205203-GPL29970_series_matrix.txt.gz',getGPL = F) # Mouse Genome
@@ -197,7 +199,7 @@ write.table(nrDEG,"DEG_limma_APAPvsBaseline_Mouse.xls",sep="\t",quote = F)
 
 
 # RNA-seq数据
-library(EnhancedVolcano)
+library(EnhancedVolcano) # https://www.bioconductor.org/packages/release/bioc/vignettes/EnhancedVolcano/inst/doc/EnhancedVolcano.html#introduction
 setwd("C:/Users/Lenovo/OneDrive/liver/GSE217659_RAW")
 load("DEG_DESeq2_Modelvscontrol.Rdata")
 
